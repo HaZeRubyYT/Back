@@ -2,7 +2,7 @@ import { Server } from "socket.io";
 import express from "express";
 import { createServer } from "http";
 import { generateUsername } from "unique-username-generator";
-import { cors } from "cors";
+import cors from "cors";
 
 const port = 3001;
 
