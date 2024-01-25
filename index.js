@@ -2,11 +2,15 @@ import { Server } from "socket.io";
 import express from "express";
 import { createServer } from "http";
 import { generateUsername } from "unique-username-generator";
+import { cors } from "cors";
 
 const port = 3001;
 
 const app = express();
 const httpServer = createServer(app);
+
+app.use(cors({ origin: "https://legendary-sundae-dc58ea.netlify.app/" }));
+
 const io = new Server(httpServer, {
 	cors: {
 		origin: "https://legendary-sundae-dc58ea.netlify.app/",
@@ -43,7 +47,7 @@ io.on("connection", (socket) => {
 					timeValue.getHours() +
 					":" +
 					(timeValue.getMinutes() < 10 ? `0${timeValue.getMinutes()}` : timeValue.getMinutes()),
-				milliseconds : timeValue.getTime()
+				milliseconds: timeValue.getTime(),
 			},
 		];
 		io.emit("get username", usernames);
