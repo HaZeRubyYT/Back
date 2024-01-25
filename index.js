@@ -9,12 +9,11 @@ const port = 3001;
 const app = express();
 const httpServer = createServer(app);
 
-app.use(cors({ origin: ["https://legendary-sundae-dc58ea.netlify.app/", "http://localhost:5173"] }));
+app.use(cors({ origin: "*" }));
 
 const io = new Server(httpServer, {
 	cors: {
-		origin: ["https://legendary-sundae-dc58ea.netlify.app/", "http://localhost:5173"],
-		credentials: true,
+		origin: "*",
 	},
 });
 let usernames = [];
