@@ -1,20 +1,23 @@
 {
-  "name": "back",
-  "version": "1.0.0",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "type": "module",
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "cors": "^2.8.5",
-    "express": "^4.18.2",
-    "http": "^0.0.1-security",
-    "socket.io": "^4.7.2",
-    "unique-username-generator": "^1.2.0"
-  },
-  "description": ""
+	"name": "back",
+	"version": "1.0.0",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"type": "module",
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"cors": "^2.8.5",
+		"express": "^4.18.2",
+		"generate-password": "^1.7.1",
+		"http": "^0.0.1-security",
+		"mongodb": "^6.3.0",
+		"nodemon": "^3.1.0",
+		"socket.io": "^4.7.2"
+	},
+	"description": ""
 }
+
